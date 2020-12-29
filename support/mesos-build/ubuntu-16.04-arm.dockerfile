@@ -55,7 +55,7 @@ RUN add-apt-repository -y ppa:deadsnakes/ppa && \
     rm -rf /var/lib/apt/lists
 
 # Install newer Clang.
-RUN curl http://releases.llvm.org/8.0.0/clang+llvm-8.0.0-aarch64-linux-gnu.tar.xz -o /tmp/clang.tar.xz && \
+RUN curl https://releases.llvm.org/8.0.0/clang%2bllvm-8.0.0-aarch64-linux-gnu.tar.xz -o /tmp/clang.tar.xz && \
     tar -xf /tmp/clang.tar.xz && \
     rm /tmp/clang.tar.xz && \
     cp -R clang+llvm-8.0.0-aarch64-linux-gnu/* /usr/ && \
